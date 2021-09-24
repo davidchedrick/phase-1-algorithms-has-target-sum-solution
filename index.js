@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  const seenNum = {}
+ for(const number of array){
+   const answer = target - number;
+   if(answer in seenNum)
+    return true
+    seenNum[number] = true
+   
+  }
+  return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  runtime O(n^2)
+  space  O(n)
 */
 
 /* 
   Add your pseudocode here
+  create obj to track numbers seen
+  itterare each number
+  id the answer   target - num
+  check if key in obj is answer 
+  return true
+  if not add to obj
 */
 
 /*
